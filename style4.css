@@ -384,3 +384,70 @@ button:hover {
 #gameover-screen.lose-state {
     background: rgba(20, 4, 8, 0.9);
 }
+
+#startScreen{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#020812,#071d36,#01040a);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+#startScreen h1{
+    color:#00e5ff;
+    font-size:70px;
+    letter-spacing:8px;
+    text-shadow:0 0 10px #00e5ff,
+                 0 0 30px #00e5ff,
+                 0 0 60px #00e5ff;
+    animation:glow 2s infinite alternate;
+}
+
+#startScreen p{
+    color:white;
+    margin:15px 0;
+    font-size:22px;
+}
+
+#startBtn{
+    margin-top:30px;
+    padding:18px 60px;
+    font-size:24px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    background:#00e5ff;
+    color:#000;
+    font-weight:bold;
+    box-shadow:0 0 15px #00e5ff,
+               0 0 35px #00e5ff;
+    transition:.3s;
+}
+
+#startBtn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px #00e5ff,
+               0 0 50px #00e5ff,
+               0 0 80px #00e5ff;
+}
+
+.hint{
+    margin-top:40px;
+    color:#999;
+    letter-spacing:3px;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #00e5ff,
+                    0 0 20px #00e5ff;
+    }
+    to{
+        text-shadow:0 0 20px #00e5ff,
+                    0 0 50px #00e5ff,
+                    0 0 80px #00e5ff;
+    }
+}

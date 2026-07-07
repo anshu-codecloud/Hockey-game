@@ -1436,3 +1436,22 @@ function drawSpeedUpMsg() {
 
 loop();
 startGame();
+let gameStarted = false;
+
+const startBtn = document.getElementById("startBtn");
+const startScreen = document.getElementById("startScreen");
+
+startBtn.onclick = function(){
+
+    startScreen.style.opacity = "0";
+
+    setTimeout(()=>{
+        startScreen.style.display="none";
+        gameStarted = true;
+
+        // Yahin se tumhara game start hoga
+        gameLoop();
+
+    },500);
+
+};
